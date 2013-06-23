@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Ubiquity</title>
+		<script type="text/javascript" src="js/jquery_dev.js"></script>
+		<script type="text/javascript" src="js/jqBarGraph.js"></script>
+		<script type="text/javascript" src="ubiquity.js"></script>
+		<link rel="stylesheet" type="text/css" href="ubiquity.css" />
+	</head>
+	<body>
+		<div id="mainDiv"></div>
+		<div id="buttonDiv">
+			<input id="run_button" type="submit" value="run" />
+			<span id="attemptTimes"></span>/<span id="settingAttemptTimes"></span>
+			<input id="stop_button" type="submit" value="pause" disabled="disabled" />
+			<input id="saveChData_button" type="submit" value="put CSV" />			
+		</div>
+		<div id="settingDiv">
+			<ul>
+				<li><input id="tablerow" class="param" type="text" value="20" /> rows</li>
+				<li><input id="tablecol" class="param" type="text" value="20" /> cols</li>
+				<li>attempt <input id="attempt_times_max" class="param" type="text" value="2000" /> steps/run</li>
+				<li>fire/ <input id="fire_per_step" class="param" type="text" value="20" /> steps</li>
+				<li>delay <input id="waiting_time" class="param" type="text" value="50" /> mili second/step</li>
+			</ul>		
+		</div>
+		<div id="realTimeChartDiv"></div>
+		<div id="histogramChartDiv"></div>
+	</body>
+</html> 
