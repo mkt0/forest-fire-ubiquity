@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Ubiquity</title>
+		<title>森林火災スケールのシミュレーション</title>
 		<!-- css -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="ubiquity.css" />
@@ -13,28 +13,10 @@
 			<div class="span12">
 				<div class="alert fade in" id="description">
 					<button type="button" class="close" data-dismiss="alert">×</button>
-					”森林火災の規模はべき乗則に従う” という事が知られています。<br />
-					例えば、火災の規模が2倍になると起こる頻度は4分の1になる、といった具合です。<br />
-					<br />
-					森林火災を単純なルールでモデル化すると、この法則を再現する事ができます。<br />
-					<br />
-					<ol>
-						<li>仮想の２次元森林を設定する。</li>
-						<li>時間経過と共にエリア内に木を生やす（場所はランダム）。</li>
-						<li>一定期間毎に発火させる（場所はランダム）。</li>
-						<li>発火させた場所に木があれば、燃やして消す。</li>
-						<li>上下左右に隣接した木があれば、その木も燃やす。</li>
-						<li>隣接した木が無くなるまで燃焼を繰り返す。</li>
-					</ol>
-					<br />
 					下のRunボタンを押すとシミュレーションが始まります。	<br />
 					火災の規模をグラフにプロットしつつ、終了後ヒストグラムを表示します。<br />
-					べき乗則が現れる不思議を楽しんで下さい。<br />
-					（森林のサイズや発火頻度を変えても、同じようにべき乗則が現れる筈です）<br />
-					<br />
-					もっと詳しく知りたい人は
-					<a href="http://www.amazon.co.jp/gp/product/4150503583/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4150503583&linkCode=as2&tag=sato_kari-22">元ネタの本</a><img src="http://www.assoc-amazon.jp/e/ir?t=sato_kari-22&l=as2&o=9&a=4150503583" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-					をどうぞ。
+					森林の大きさ、発火間隔、アニメーションスピード等のパラメータを変更できますので、<br />
+					いろいろ試してみて下さい。Enjoy!
 				</div>
 			</div>
 		</div>
@@ -48,7 +30,7 @@
 							<input id="tablerow" class="param" type="text" value="10" /> *
 							<input id="tablecol" class="param" type="text" value="10" />
 						</li>
-						<li>Step Times: <input id="attempt_times_max" class="param" type="text" value="100" /> / Run</li>
+						<li>Step-Max: <input id="attempt_times_max" class="param" type="text" value="100" /> / Run</li>
 						<li>Fire Interval: <input id="fire_per_step" class="param" type="text" value="3" /> / Step</li>
 						<li>Animation Delay Time: <input id="waiting_time" class="param" type="text" value="150" /> ms</li>
 					</ul>
