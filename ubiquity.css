@@ -1,6 +1,13 @@
+#description {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
 #mainDiv {
 	margin-top: 30px;
-
 }
 
 #MainTable {
@@ -12,8 +19,8 @@
 
 #MainTable td {
     border: none;
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
 }
 
 div.caption {
@@ -48,6 +55,7 @@ div.caption {
 	padding: 5px;
 	border: solid 1px #CCC;
 	border-radius: 5px;
+	background: #EEF;
 }
 
 .param {
@@ -75,4 +83,8 @@ div#histogramChartDiv {
 
 div#histogramChartDiv div.graphValuehistogramChartDiv {
 	color: #CCC;
+}
+
+div.footer {
+	margin:10px;
 }
