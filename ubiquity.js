@@ -355,7 +355,7 @@ $(function(){
 			$('#histogramChartDiv').removeAttr('style');
 		},
 		'load' : function() {
-			var barColor = '#555555';
+			var barColor = '#CCC';
 			var binsNum = 10;		// number of frequency data bins
 			var bins = getBins(realTimeCh.data, binsNum);	// frequency bins array
 			var chData = frequency(realTimeCh.data, bins);

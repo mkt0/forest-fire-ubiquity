@@ -9,8 +9,8 @@
 
 #MainTable td {
     border: none;
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
 }
 
 #buttonDiv {
@@ -32,4 +32,21 @@
 
 .param {
 	width: 50px;
+}
+
+div#realTimeChartDiv {
+	margin: 3px;
+	border: solid 1px #DDD;
+}
+
+div[id^="realTimeChField"],
+div[id^="realTimeChLabel"] {
+	border-top: solid 1px #DDD;
+}
+
+div#histogramChartDiv {
+	margin: 3px;
+	width: 400px;
+	height: 300px;
+	border: solid 1px #DDD;
 }
