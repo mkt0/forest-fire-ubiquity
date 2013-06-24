@@ -237,7 +237,7 @@ $(function(){
 		'barWidth' : 1,	// graph bar width
 		'barMargin' : 1,	// margin of between bars
 		'chHeight' : 200,	// chart area height
-		'chWidth' : 500,	// chart area width
+		'chWidth' : 300,	// chart area width
 		'scaleMax' : 0,	// max value of y-axs scale
 		'scaleFieldWidth' : 20,
 		'scaleFontSize' : 10,
@@ -364,7 +364,7 @@ $(function(){
 				chData[i].push(barColor);
 			};
 			
-			$('#histogramChartDiv').jqBarGraph({ data: chData });
+			$('#histogramChartDiv').jqBarGraph({ data: chData, width: 300, height: 220 });
 			
 			function getBins(data, num) {
 				var minValue;

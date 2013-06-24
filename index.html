@@ -4,29 +4,59 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Ubiquity</title>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/jqBarGraph.js"></script>
-		<script type="text/javascript" src="ubiquity.js"></script>
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="ubiquity.css" />
 	</head>
 	<body>
-		<div id="mainDiv"></div>
-		<div id="buttonDiv">
-			<input id="run_button" type="submit" value="run" />
-			<span id="attemptTimes"></span>/<span id="settingAttemptTimes"></span>
-			<input id="stop_button" type="submit" value="pause" disabled="disabled" />
-			<input id="saveChData_button" type="submit" value="put CSV" />			
+		<div class="row">
+			<div class="span4">
+				<div class="caption">Settings</div>
+				<div id="settingDiv">
+					<ul>
+						<li>
+							Trees:
+							<input id="tablerow" class="param" type="text" value="20" /> *
+							<input id="tablecol" class="param" type="text" value="20" />
+						</li>
+						<li>Step Times: <input id="attempt_times_max" class="param" type="text" value="2000" /> / Run</li>
+						<li>Fire Interval: <input id="fire_per_step" class="param" type="text" value="20" /> / Step</li>
+						<li>Animation Delay Time: <input id="waiting_time" class="param" type="text" value="50" /> ms</li>
+					</ul>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="caption">Number of burned trees</div>
+				<div id="realTimeChartDiv"></div>
+			</div>
+			<div class="span4">
+				<div class="caption">Histgram of burned trees</div>
+				<div id="histogramChartDiv"></div>
+			</div>			
 		</div>
-		<div id="settingDiv">
-			<ul>
-				<li><input id="tablerow" class="param" type="text" value="20" /> rows</li>
-				<li><input id="tablecol" class="param" type="text" value="20" /> cols</li>
-				<li>attempt <input id="attempt_times_max" class="param" type="text" value="2000" /> steps/run</li>
-				<li>fire/ <input id="fire_per_step" class="param" type="text" value="20" /> steps</li>
-				<li>delay <input id="waiting_time" class="param" type="text" value="50" /> mili second/step</li>
-			</ul>		
+		<div class="row">
+			<div class="span12">
+				<div id="buttonDiv">
+					<input id="run_button" class="btn btn-primary" type="submit" value="run" />
+					<span id="progress">
+						<span id="attemptTimes"></span>
+						/
+						<span id="settingAttemptTimes"></span>
+					</span>
+					<input id="stop_button" class="btn" type="submit" value="pause" disabled="disabled" />
+					<input id="saveChData_button" class="btn" type="submit" value="put CSV" />			
+				</div>					
+			</div>
 		</div>
-		<div id="realTimeChartDiv"></div>
-		<div id="histogramChartDiv"></div>
+		<div class="row">
+			<div class="span12">
+				<div id="mainDiv"></div>
+			</div>
+		</div>
+
+		<!-- scripts -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jqBarGraph.js"></script>
+		<script type="text/javascript" src="ubiquity.js"></script>
 	</body>
 </html> 
